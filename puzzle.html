@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Личный сайт студента GeekBrains</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    
+    function checkAnswer (id, trueAnswer)
+    {
+        var userAnswer = document.getElementById(id).value;
+        if (userAnswer == trueAnswer)
+            return true;
+        else
+            return false;
+    }
+
+    function checkAnswers()
+    {
+        var goodAnswers = 0;
+
+        if(checkAnswer('puzzle1','малина')==true) goodAnswers++;
+        if(checkAnswer('puzzle2','ежик')==true) goodAnswers++;
+        if(checkAnswer('puzzle3','тень')==true) goodAnswers++;
+        if(checkAnswer('puzzle4','арбуз')==true) goodAnswers++;
+                
+        if (goodAnswers == 0) alert(' Вы ничего не угадали ');
+        else
+            alert('Количество правильных ответов: ' + goodAnswers);
+    }
+    </script>
+
+    </head>
+<body>
+    <div id="header">
+        <a href="index.html">Главная</a><span>/</span>
+        <a href="#">Загадки</a><span>/</span>
+        <a href="#">Угадайка</a><span>/</span>
+        <a href="guess-2.html">Угадайка мультиплеер</a><span>/</span>
+    </div>
+    <div id="content">
+        <h1>Личный сайт студента GeekBrains</h1>
+        <div id="center">   
+            <h3>Игра в загадки</h3>         
+            <div id="box">
+
+                <h5>Отгадайте загадки </h5>
+                <p>Медведи так любят её, и не диво: душистая, сладкая и – красивая!</p>
+                <input type ="text" id = puzzle1 />
+
+                </br></br></br>
+
+                <p>Под соснами, под ёлками лежит мешок с иголками</p>
+
+                <input type="text" id="puzzle2" />
+             	
+             	</br></br></br>
+
+                <p>Ты за ней, а она от тебя. Ты от неё, а она за тобой.</p>
+
+                <input type="text" id="puzzle3" />
+             	
+             	</br></br></br>
+
+             	<p>Сам алый, сахарный, кафтан зелёный, бархатный</p>
+
+                <input type="text" id="puzzle4" />
+             	
+             	</br></br></br>
+
+             	<!-- <input type="button" value="Ответить" /> -->
+
+             	<input type ="button" onclick = "checkAnswers()" value = "Ответить" />
+    <!--             <a href="#" onclick="AskQuestions();">Отправить</a> -->
+        </div>
+    </div>
+
+    <div id="footer">
+        Copyright © 2016 <a href="https://geekbrains.ru/"> GeekBrains </a>
+    </div>
+
+</body>
+</html>
